@@ -1,0 +1,1 @@
+Получены данные о vpc, subnets и SG и выведены в output
