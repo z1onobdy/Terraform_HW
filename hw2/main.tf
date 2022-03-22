@@ -1,10 +1,10 @@
 resource "aws_instance" "hw2-ec2-instance" {
   ami                         = data.aws_ami.amazon_linux.id
   instance_type               = "t2.micro"
-  subnet_id                   = " subnet-033bffb7002e3c554"
+  subnet_id                   = "subnet-033bffb7002e3c554"
   associate_public_ip_address = true
   key_name                    = "test"
-  security_groups             = ["sg-0f378f13cd7782263"]
+  vpc_security_group_ids      = ["sg-0f378f13cd7782263"]
 
   user_data = <<EOF
 #! /bin/bash
